@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+</head>
+<body>
+    <h1>Exam Result</h1>
+    <form name="myform" >
+        <label for="html">HTML</label>
+        <input type="number" name="html" id="html" placeholder="Enter HTML mark">
+        <br><br>
+        <label for="js">Java Script</label>
+        <input type="number" name="js" id="js" placeholder="Enter Java-Script mark">
+        <br><br>
+        <label for="css">CSS</label>
+        <input type="number" name="css" id="css" placeholder="Enter CSS mark"><br><br>
+        <button type="button" onclick="result()">Button</button>
+    </form>
+    <script>
+        alert("Test Your Exam marks")
+        function result(){
+            let html = document.myform.html.value;
+            console.log(html);
+            let js = document.myform.js.value;
+            console.log(js);
+            let css = document.myform.css.value;
+            console.log(css);
+        
+        if(html >= 50 && js >= 50 && css >=50){
+            document.write('<br>This Student is passs!</br>');
+            if(html>80){
+                document.write("<br>This student pass HTML with D</br>")
+            }if(js>80){
+                document.write("<br>This student pass Java Script with D</br>")
+            }if(css>80){
+                document.write("<br>This student pass CSS with D</br>") 
+            }if(html>80 || js>80 || css>80){
+                document.write("<br>This stundent pass the exam with D !!!</br>")
+            }
+            }else {
+                document.write('<br>This student is Fail!</br>');}   
+        } 
+    </script>
+</body>
+</html>
