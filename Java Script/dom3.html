@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Header with DOM</h1>
+    <br><br>
+    <img src="smile1.jpg" alt="" width="120" height="90" id="img1">
+    <br><hr><br>
+    <button onclick="clickChange()">Click</button>
+    <br><br>
+    <img src="smile2.jpg" alt="" width="180" height="150" onmouseover="big()" onmouseout="normal()" id="img2">
+    <script>
+        function clickChange() {
+            //alert("Hello");
+            document.querySelector('#header').style.color='red';
+            document.querySelector('#header').style.backgroundColor='black';
+
+            let img1=document.querySelector('#img1');
+            img1.style.width='400px';
+            img1.style.height='300px';
+        }
+        function big(){
+            let img2=document.querySelector('#img2');
+            img2.style.width='400px';
+            img2.style.height='300px';
+        }
+
+        function normal(){
+            let img2=document.querySelector('#img2');
+            img2.style.width='180px';
+            img2.style.height='150px';
+        }
+    </script>
+</body>
+</html>

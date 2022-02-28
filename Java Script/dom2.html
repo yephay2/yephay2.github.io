@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .heading{
+        color: red;
+    }
+</style>
+<body>
+    <h1 id="cElement" onclick="attribute()">Create Element</h1>
+    <button onclick="addElement()">Add Element</button>
+    <br><br>
+    <input type="text" id="name" name="name">
+    <input type="number" id="hdd" name="hdd">
+    <button onclick="adding()">Add</button>
+    <ul id="ul">
+        <li>Apple</li>
+        <li>Del</li>
+    </ul>
+    <script>
+        function addElement(){
+            let h3=document.createElement('h3');
+            //console.log(h3);
+            h3.innerText='Create h3 Element';
+            console.log(h3);
+            document.body.appendChild(h3);
+        }
+
+        function adding(){
+          
+            let name=document.querySelector('#name').value;
+            console.log(name);
+            let hdd=document.querySelector('#hdd').value;
+            console.log(hdd);
+            let li1=document.createElement('li');
+            li1.innerText=name;
+            let li2=document.createElement('li');
+            li2.innerText=hdd;
+            let ul=document.querySelector('#ul');
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+        }
+        function attribute(){
+            let cElemet=document.querySelector('#cElement');
+            let attr=cElemet.getAttribute('class');
+            console.log(attr);
+            if (attr) {
+                cElemet.removeAttribute('class')
+            }else{
+                cElemet.setAttribute('class','heading');
+            }
+        }
+    </script>
+</body>
+</html>

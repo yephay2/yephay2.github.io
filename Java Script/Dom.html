@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        h1{
+            background-color: aqua;
+            color: orange;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 align='center'>Unicersity stundent List</h1>
+    <button onclick="Calculate()">Add Student Data</button>
+    <div id="c_form"></div>
+    <br><br>
+    <button onclick="result()">Add</button>
+    <br><br>
+     <table border="1" cellspacing="0" cellpadding="12">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+   
+    <script>
+        function Calculate(){
+            let add_list=prompt('Choose:1=Yes OR 0=N0');
+            let Yes=1;
+            let j=1;
+            let Gdata=[];
+            let data='';
+            if (add_list==Yes){
+                var amount=prompt('How many students do u want to add?')
+                for (i =0;i<=amount;i++){
+                    Gdata=[data[j]]
+                }
+                for(j = 0 ;j<=amount ;j++){
+                data=`<form name="list" id="list${j}">
+                        <br><br>
+                        <label for="name">Name</label>
+                        <input type="text" id="name${j}" name="name" placeholder="Enter Name of the student">
+                        <br><br>
+                        <label for="sub">Subject</label>
+                        <input type="text" name="sub" id="sub${j}" placeholder="Enter Major Subject !">
+                        <br><br>
+                        <label for="age">Age</label>
+                        <input type="text" name="age" id="age${j}" placeholder="Enter your age !">
+                        </form>`
+                        c_form.innerHTML=data;
+             }
+            }
+            }
+        function result(){
+            //alert('Hello');
+                let name=document.list.name.value;
+                    console.log(name);
+                let sub=document.list.sub.value;
+                    console.log(sub);
+                let age=document.list.age.value;
+                    console.log(age);
+                let arr=[{name,sub,age}];
+                    console.log(arr);
+                let tbody=document.querySelector('#tbody');
+                let Fdata='';
+                console.log(Fdata);
+                for (let valUe of arr) {
+                    Fdata += `<tr>
+                    
+                         <td>${name}</td>
+                         <td>${sub}</td>
+                         <td>${age}</td>
+                         </tr>`
+                 tbody.innerHTML=Fdata;
+                }
+        }
+    </script>
+</body>
+</html>

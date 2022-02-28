@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       h1{
+            color: bisque;
+            background-color:burlywood;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body{
+            background-color: gray;
+        }
+        button{
+            color:brown;
+            text-align: center;
+            margin: 4px 2px;
+            display: inline-block;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+     <h1 align='center';>Student List</h1>
+     <form name="list" id="list">
+       
+        <input type="text" id="t1" name="name" placeholder="Enter Your Name">
+        <input type="text" id="t2" name="age"placeholder="Enter your age" >
+        <input type="text" id="t3" name="sub"  placeholder="Enter subject">
+        <br><br>
+        <button onclick="adding()" style="padding: 10px;">ADD</button>
+        <br><br>
+    </form>
+    <table border="1" cellspacing="0"cellpadding="12" align="center">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Subject</td>
+            </tr>
+            <tbody id="tbody">
+
+
+            </tbody>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+        <script>
+            function adding(){
+                alert('Hello');
+                let name=document.querySelector('#t1');
+                console.log(na);
+            }
+        </script>
+</body>
+</html>

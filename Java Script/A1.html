@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        h1{
+             color: bisque;
+             background-color:burlywood;
+             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+         body{
+             background-color: gray;
+         }
+         button{
+             color:brown;
+             text-align: center;
+             margin: 4px 2px;
+             display: inline-block;
+             background-color: aquamarine;
+         }
+     </style>
+</head>
+<body>
+    <h1 align="center">Student List!</h1>
+        <label for="t1">Name</label>
+        <input type="text" id="t1" name="t1" placeholder="Enter Name">
+        <label for="t2">Age</label>
+        <input type="number" id="t2" name="t2" placeholder="Enter age">
+        <label for="t3">Subject</label>
+        <input type="text" id="t3" name="t3" placeholder="Enter Subject">
+        <br><br><br>
+        <button onclick="adding()" style="padding: 10px;">Add</button>
+        <table border="1" cellspacing="0" cellpadding="12" align="center">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Subject</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    <script>
+        function adding(){
+            //alert('Hello');
+            let name=document.querySelector('#t1').value;
+            console.log(name);
+            let age=document.querySelector('#t2').value;
+            console.log(age);
+            let sub=document.querySelector('#t3').value;
+            console.log(sub);
+            let tr=document.createElement('tr');
+            let td1=document.createElement('td');
+            td1.innerText=name;
+            let td2=document.createElement('td');
+            td2.innerText=age;
+            let td3=document.createElement('td');
+            td3.innerText=sub;
+            let tbody=document.querySelector('#tbody');
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tbody.appendChild(tr);
+            
+        }
+    </script>
+</body>
+</html>

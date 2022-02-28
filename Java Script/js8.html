@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        let now= new Date();
+        console.log(now);
+        let monthName=['jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec']
+        console.log(monthName[now.getMonth()]);
+        function digitalClock(){
+            let timer = new Date();
+            let hour = timer.getHours();
+            let min = timer.getMinutes();
+            let sec=timer.getSeconds();
+            console.log(sec);
+        
+            document.getElementById('clock').innerHTML=`<h1>${hour} : ${min} : ${sec}</h1>`
+        }
+       // setInterval('digitalClock()',1000);
+        
+    </script>
+</body>
+</html>

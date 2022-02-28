@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Function
+        function result(num1,num2,num3){
+            let res= num1 + num2 + num3;
+            document.write(`<h3>${res}</h3>`)
+        }
+        result(12,34,56);
+
+        function subresult(num1=30,num2=10){
+            let subres= num1- num2;
+            document.write(`<h3>${subres}</h3>`)
+            }
+        subresult();
+        subresult(20, 10);
+
+        //Object
+        let laptop={name:'Apple',type:'M1',price:'200000',}
+        document.write(laptop.price);
+        document.write(`<h3>${laptop['name']}</h3>`)
+    </script>
+</body>
+</html>
